@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.7)
-project(rockin_msgs)
+project(raw_pb_msgs)
 
 find_package(Protobuf REQUIRED)
 
@@ -7,12 +7,12 @@ include_directories(${PROTOBUF_INCLUDE_DIRS})
 
 set(CFH_ROOT_DIR ${PROJECT_SOURCE_DIR}/../at_work_central_factory_hub)
 
-file(GLOB CFH_PROTOS ${CFH_ROOT_DIR}/rockin/msgs/*.proto)
+file(GLOB CFH_PROTOS ${CFH_ROOT_DIR}/raw/msgs/*.proto)
 
 protobuf_generate_cpp(PROTO_SRCS PROTO_HDRS ${CFH_PROTOS})
 
-add_library(rockin_msgs SHARED ${PROTO_SRCS})
-target_link_libraries(rockin_msgs ${PROTOBUF_LIBRARIES})
+add_library(raw_pb_msgs SHARED ${PROTO_SRCS})
+target_link_libraries(raw_pb_msgs ${PROTOBUF_LIBRARIES})
 
 ## if: using catkin_make
 if(DEFINED _CATKIN_ALL_INCLUDED_)
@@ -20,7 +20,7 @@ if(DEFINED _CATKIN_ALL_INCLUDED_)
 
   catkin_package(
     LIBRARIES
-      rockin_msgs
+      raw_pb_msgs
   )
 
   file(MAKE_DIRECTORY ${CATKIN_DEVEL_PREFIX}/${CATKIN_GLOBAL_INCLUDE_DESTINATION}/${PROJECT_NAME} )
@@ -41,7 +41,7 @@ if(DEFINED _CATKIN_ALL_INCLUDED_)
 ## else: using cmake
 else()
   install(
-    TARGETS rockin_msgs
+    TARGETS raw_pb_msgs
     LIBRARY DESTINATION lib
   )
   install(

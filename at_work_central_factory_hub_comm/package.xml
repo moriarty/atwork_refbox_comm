@@ -2,7 +2,7 @@
 <package>
   <name>at_work_central_factory_hub_comm</name>
   <version>0.0.1</version>
-  <description>ROS metapackage for communication with the RoCKIn@Work Central Factory Hub.</description>
+  <description>ROS metapackage for communication with the RoboCup@Work Central Factory Hub.</description>
 
   <maintainer email="alexander.moriarty@brsu.de">Alex Moriarty</maintainer>
 
