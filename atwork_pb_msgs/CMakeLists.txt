@@ -1,14 +1,14 @@
 cmake_minimum_required(VERSION 2.8.7)
-project(raw_msgs)
+project(atwork_pb_msgs)
 find_package(catkin REQUIRED)
 
 find_package(Protobuf REQUIRED)
 
 include_directories(${PROTOBUF_INCLUDE_DIRS})
 
-set(CFH_ROOT_DIR ${PROJECT_SOURCE_DIR}/../at_work_central_factory_hub)
+set(CFH_ROOT_DIR ${PROJECT_SOURCE_DIR}/../atwork_refbox)
 
-file(GLOB CFH_PROTOS ${CFH_ROOT_DIR}/raw/msgs/*.proto)
+file(GLOB CFH_PROTOS ${CFH_ROOT_DIR}/atwork/msgs/*.proto)
 
 protobuf_generate_cpp(PROTO_SRCS PROTO_HDRS ${CFH_PROTOS})
 
@@ -17,13 +17,13 @@ add_custom_target(copy ALL
 )
 
 
-add_library(raw_msgs SHARED ${PROTO_SRCS})
-target_link_libraries(raw_msgs ${PROTOBUF_LIBRARIES})
+add_library(atwork_pb_msgs SHARED ${PROTO_SRCS})
+target_link_libraries(atwork_pb_msgs ${PROTOBUF_LIBRARIES})
 
 
 catkin_package(
   LIBRARIES
-    raw_msgs
+    atwork_pb_msgs
 )
 
 
@@ -40,7 +40,7 @@ install(FILES ${PROTO_HDRS}
   DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION}
 )
 
-install(TARGETS raw_msgs
+install(TARGETS atwork_pb_msgs
   ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
@@ -49,7 +49,7 @@ install(TARGETS raw_msgs
 ## else: using cmake
 #else()
 #  install(
-#    TARGETS raw_msgs
+#    TARGETS atwork_pb_msgs
 #    LIBRARY DESTINATION lib
 #  )
 #  install(

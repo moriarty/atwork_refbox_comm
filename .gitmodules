@@ -1,4 +1,4 @@
 [submodule "at_work_central_factory_hub"]
-	path = at_work_central_factory_hub
-    url = https://github.com/moriarty/rockin-refbox.git
-    branch = robocup-refbox-dev
+    path = atwork_refbox
+    url = https://github.com/moriarty/atwork-refbox.git
+    branch = master
