@@ -9,6 +9,17 @@ set(PROTOBUF_COMM_SRC_DIR ${CFH_ROOT_DIR}/src/libs/protobuf_comm)
 set(CFH_LIBS_DIR ${CFH_ROOT_DIR}/src/libs)
 
 #link_directories(${Boost_LIBRARY_DIRS})
+if(EXISTS "${PROTOBUF_COMM_SRC_DIR}"
+    AND IS_DIRECTORY "${PROTOBUF_COMM_SRC_DIR}")
+  message(STATUS "protobuf_comm source directory found.")
+else()
+  message(FATAL_ERROR "\n"
+      "protobuf_comm source directory not found."
+      "Check if git submodule has been initialized."
+      "See README in \"atwork_refbox_comm\"\n")
+endif(EXISTS "${PROTOBUF_COMM_SRC_DIR}"
+    AND IS_DIRECTORY "${PROTOBUF_COMM_SRC_DIR}")
+
 
 add_definitions("-std=c++0x")
 add_definitions("-DHAVE_LIBCRYPTO")

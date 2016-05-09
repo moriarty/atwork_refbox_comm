@@ -7,6 +7,17 @@ find_package(Protobuf REQUIRED)
 include_directories(${PROTOBUF_INCLUDE_DIRS})
 
 set(CFH_ROOT_DIR ${PROJECT_SOURCE_DIR}/../atwork_refbox)
+set(ATWORK_MSGS_DIR "${CFH_ROOT_DIR}/atwork/msgs")
+
+IF(EXISTS "${ATWORK_MSGS_DIR}" AND IS_DIRECTORY "${ATWORK_MSGS_DIR}")
+  MESSAGE(STATUS "protobuf msgs directory exists")
+ELSE()
+  MESSAGE(FATAL_ERROR "\n"
+     "Protobuf msgs directory doesn't exist.\n"
+     "Check if the submodule has been initialized.\n"
+     "Please see README in \"atwork_refbox_comm\"\n"
+  )
+ENDIF(EXISTS "${ATWORK_MSGS_DIR}" AND IS_DIRECTORY "${ATWORK_MSGS_DIR}")
 
 file(GLOB CFH_PROTOS ${CFH_ROOT_DIR}/atwork/msgs/*.proto)
 

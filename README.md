@@ -1,18 +1,21 @@
-# at_work_central_factory_hub_comm
-Communication with the RoCKIn@Work Central Factory Hub.
+# atwork refbox comm
+Catkin Meta Package for communicating with the RoboCup@Work RefBox.
 
-### Installation
+Provides:
+
+1. **protobuf comm**: library used to communicate with the refbox.
+2. **atwork pb msgs**: Official protobuf messages used to communicate with the refbox.
+3. **atwork ros msgs**: ROS translations of the protobuf messages. Provided as example, not as official messages.
+
+## Installation
 
     cd <catkin_workspace>/src
-    git clone git@github.com:rockin-robot-challenge/at_work_central_factory_hub_comm.git
-
-### Fetch the git submodules
-
-    cd at_work_central_factory_hub
-    git submodule update
+    git clone git@github.com:robocup-at-work/atwork_refbox_comm.git
+    cd atwork_refbox_comm
     git submodule init
+    git submodule update
 
-### run catkin_make in your catkin_workspace
+## Run catkin make
 
     cd <catkin_workspace>
     catkin_make
