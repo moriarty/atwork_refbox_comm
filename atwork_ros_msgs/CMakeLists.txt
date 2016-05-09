@@ -13,9 +13,6 @@ add_message_files(
   FILES
     AttentionMessage.msg
     BenchmarkState.msg
-    BenchmarkFeedback.msg
-    DrillingMachineCommand.msg
-    DrillingMachineStatus.msg
     Inventory.msg
     Item.msg
     LocationIdentifier.msg
@@ -27,7 +24,6 @@ add_message_files(
     BenchmarkScenario.msg
     LoggingStatus.msg
     Transaction.msg
-    RobotStatusReport.msg
 )
 
 generate_messages(
