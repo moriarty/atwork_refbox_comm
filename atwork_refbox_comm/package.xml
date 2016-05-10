@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <package>
-  <name>at_work_central_factory_hub_comm</name>
+  <name>atwork_refbox_comm</name>
   <version>0.0.1</version>
   <description>ROS metapackage for communication with the RoboCup@Work Central Factory Hub.</description>
 
