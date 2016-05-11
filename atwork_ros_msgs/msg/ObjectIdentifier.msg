@@ -14,8 +14,6 @@ uint8   DISTANCE_TUBE = 12 #
 uint8   MOTOR         = 13 #
 uint8   CONTAINER_B   = 14 # A Container (Blue)
 uint8   CONTAINER_R   = 15 # A Container (Red)
-uint8   CAVITY        = 16 # A PPT Cavity
-uint8   NAV_GOAL      = 17 # A Navigation Goal TODO: discuss alternative
 
 # The object class (e.g. "EM-01") consists of the type ("EM") and a type ID (1).
 # The type of the object

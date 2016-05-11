@@ -3,7 +3,8 @@ uint8    SH    = 1  # Shelf
 uint8    WS    = 2  # Workstation
 uint8    CB    = 3  # Conveyor belt
 uint8    WP    = 4  # Way Point (additional navigation goal)
-uint8    ROBOT = 5
+uint8    PP    = 5  # Precision Placement platform
+uint8    ROBOT = 6
 
 # The type of location
 std_msgs/UInt64 type
