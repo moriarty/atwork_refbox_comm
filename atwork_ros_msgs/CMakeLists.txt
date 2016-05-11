@@ -17,8 +17,10 @@ add_message_files(
     Item.msg
     LocationIdentifier.msg
     ObjectIdentifier.msg
-    Order.msg
-    OrderInfo.msg
+    NavigationTask.msg
+    TransportationTask.msg
+    Task.msg
+    TaskInfo.msg
     TriggeredConveyorBeltStatus.msg
     TriggeredConveyorBeltCommand.msg
     BenchmarkScenario.msg
