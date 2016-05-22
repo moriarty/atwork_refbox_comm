@@ -26,6 +26,8 @@ add_message_files(
     BenchmarkScenario.msg
     LoggingStatus.msg
     Transaction.msg
+    RobotStatus.msg
+    RobotStatusReport.msg
 )
 
 generate_messages(
