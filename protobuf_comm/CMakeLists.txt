@@ -50,7 +50,7 @@ add_custom_target(${PROJECT_NAME}_copy_headers ALL)
 
 foreach(File ${PROTOBUF_COMM_HEADERS})
   add_custom_command(TARGET ${PROJECT_NAME}_copy_headers POST_BUILD
-    COMMAND ${CMAKE_COMMAND} -E copy ${File} ${CATKIN_DEVEL_PREFIX}/${CATKIN_GLOBAL_INCLUDE_DESTINATION}/${PROJECT_NAME}
+    COMMAND ${CMAKE_COMMAND} -E copy_if_different ${File} ${CATKIN_DEVEL_PREFIX}/${CATKIN_GLOBAL_INCLUDE_DESTINATION}/${PROJECT_NAME}
   )
 endforeach()
 
