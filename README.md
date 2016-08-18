@@ -1,22 +1,8 @@
-# atwork refbox comm
-Catkin Meta Package for communicating with the RoboCup@Work RefBox.
+# Important Information
+This repository has been moved to a new location:
 
-Provides:
+     https://github.com/industrial-robotics/atwork_refbox_comm
 
-1. **protobuf comm**: library used to communicate with the refbox.
-2. **atwork pb msgs**: Official protobuf messages used to communicate with the refbox.
-3. **atwork ros msgs**: ROS translations of the protobuf messages. Provided as example, not as official messages.
+This repository will be deleted soon. Be aware that also your fork will be gone by then. So, please change your fork/remote to the new location.
 
-## Installation
-
-    cd <catkin_workspace>/src
-    git clone git@github.com:robocup-at-work/atwork_refbox_comm.git
-    cd atwork_refbox_comm
-    git submodule init
-    git submodule update
-
-## Run catkin make
-
-    cd <catkin_workspace>
-    catkin_make
-
+Thank you for your cooperation.
